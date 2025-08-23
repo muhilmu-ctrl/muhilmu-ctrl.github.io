@@ -1,0 +1,33 @@
+body{
+    background-color: lightseagreen;
+    text-align: center;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    color:darkmagenta;
+    text-decoration: none;
+}
+
+a:hover{
+    color:whitesmoke;
+}
+
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    width:80%
+}
+
+figure{
+    text-align: center;
+}

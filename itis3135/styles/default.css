@@ -48,7 +48,7 @@ figure{
     main{
         padding:10px;
     }
-    h2.mobile-heading{
+    .mobile-heading{
         font-size: 1.5em;
     }
 }

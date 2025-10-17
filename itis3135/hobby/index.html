@@ -24,25 +24,28 @@
         p{
             font-family:Georgia;
         } 
+        .data-section{
+          display:none;
+        }
     </style>
   </head>
   <body>
     <header>
-      <h1>hobby name</h1>
+      <h1>Reading</h1>
       <nav>
-        <a href="#what" class="nav-link" data-section="what">What</a>
+        <a href="#what" class="nav-link" aria-selected="true">What</a>
         📖
-        <a href="#who" class="nav-link" data-section="who">Who</a>
+        <a href="#who" class="nav-link" aria-selected="false">Who</a>
         📖
-        <a href="#when" class="nav-link" data-section="when">When</a>
+        <a href="#when" class="nav-link" aria-selected="false">When</a>
         📖
-        <a href="#where" class="nav-link" data-section="where">Where</a>
+        <a href="#where" class="nav-link" aria-selected="false">Where</a>
         📖
-        <a href="#how" class="nav-link" data-section="how">How</a>
+        <a href="#how" class="nav-link" aria-selected="false">How</a>
         📖
-        <a href="#why" class="nav-link" data-section="why">Why</a>
+        <a href="#why" class="nav-link" aria-selected="false">Why</a>
         📖
-        <a href="#ai-prompts" class="nav-link" data-section="ai-prompts">AI Prompts</a>
+        <a href="#ai-prompts" class="nav-link" aria-selected="false">AI Prompts</a>
       </nav>
     </header>
     <main>
@@ -52,26 +55,26 @@
         <img src="images/muhilan_photo.jpeg" alt="Muhilan_Muruganandam"/>
         <figcaption><i>Muhilan Muruganandam</i></figcaption>
       </figure>
-      <section class="nav-link">
+      <section id="who" class="data-section">
         <h2>Who</h2>
         <p>Hey, I'm Muhilan and I love to read. I got into reading when I was around # years old. </p>
       </section>
-      <section class="nav-link">
+      <section id="what" class="data-section">
         <h2>What</h2>
       </section>
-      <section class="nav-link">
+      <section id="when" class="data-section">
         <h2>When</h2>
       </section>
-      <section class="nav-link">
+      <section id="where" class="data-section">
         <h2>Where</h2>
       </section>
-      <section class="nav-link">
+      <section id="how" class="data-section">
         <h2>How</h2>
       </section>
-      <section class="nav-link">
+      <section id="why" class="data-section">
         <h2>Why</h2>
       </section>
-      <section class="nav-link">
+      <section id="ai-prompts" class="data-section">
         <h2>AI Prompts</h2>
         <p><strong>Nav bar prompt: </strong>Create the code for a nav bar. it should include links to these sections: who, what, when, where, how, why, and ai prompts. use this emoji(📖) as a divider.</p>
       </section>
@@ -79,6 +82,46 @@
     <footer>
       <p>Page Built by <a href="https://webpages.charlotte.edu/mmuruga2/itis3135/muruganandamsoftware.com/">Muruganandam Software</a> &copy; 2025</p>
     </footer>
-    <script></script> <!--javascript goes here-->
+    <!--javascript goes here-->
+    <script>
+      document.addEventListener("DOMContentLoaded",()=>{
+        const navLink = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll(".data-section");
+
+        function hideSection(){
+          sections.forEach(s=>{
+            s.style.display = "none";
+          });
+        }
+        function selectAriaFalse(){
+          navLink.forEach(n=>{
+            n.setAttribute("aria-selected","false");
+          });
+        }
+        navLink.forEach(n => {
+          n.addEventListener("click",(e)=>{
+            e.preventDefault();
+
+            const target = e.currentTarget.getAttribute("href");
+            const targetSection = document.querySelector(target);
+
+            hideSection();
+            selectAriaFalse();
+            if(targetSection){
+              targetSection.style.display = "block";
+            }
+            e.currentTarget.setAttribute("aria-selected","true");
+          });
+        });
+        const defaultPage = document.querySelector("#what");
+        if(defaultPage){
+          defaultPage.style.display = "block";
+        }
+        const defaultNavLink = document.querySelector('a[href="#what"]');
+        if(defaultNavLink){
+          defaultNavLink.setAttribute("aria-selected","true");
+        }
+      });
+    </script> 
   </body>
 </html>

@@ -27,6 +27,18 @@
         .data-section{
           display:none;
         }
+        header{
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        hr{
+          height:5px;
+          background-color: black;
+        }
+        section{
+          margin-left: 60px;
+        }
     </style>
   </head>
   <body>
@@ -49,27 +61,66 @@
       </nav>
     </header>
     <main>
-      <h2 class="mobile-heading">Hobby</h2>
-      <h2 class="mobile-heading">Muhilan Muruganandam|Magnificent Meercat</h2>
-      <figure>
-        <img src="images/muhilan_photo.jpeg" alt="Muhilan_Muruganandam"/>
-        <figcaption><i>Muhilan Muruganandam</i></figcaption>
-      </figure>
+      <h2 class="mobile-heading" style="text-align: center;">Hobby Site</h2>
+      <h2 class="mobile-heading" style="text-align: center;">Muhilan Muruganandam|Magnificent Meercat</h2>
+      <hr>
       <section id="who" class="data-section">
         <h2>Who</h2>
-        <p>Hey, I'm Muhilan and I love to read. I got into reading when I was around # years old. </p>
+        <p>Hey, I'm Muhilan and I love to read. I got into reading when I first  </p>
       </section>
       <section id="what" class="data-section">
         <h2>What</h2>
+        <table>
+          <thead>
+            <tr>My Favorite Genres:</tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>- Horror</td> 
+            </tr>
+            <tr>
+              <td>- Thriller</td>
+            </tr>
+            <tr>
+              <td>- Fantasy</td>
+            </tr>
+          </tbody>
+        </table>
+        <figure>
+          <img src="#" alt="#">
+          <figcaption></figcaption>
+        </figure>
       </section>
       <section id="when" class="data-section">
         <h2>When</h2>
+        <p>I usually read whenever I want to take a break from working on assignments or if I get bored.</p>
       </section>
       <section id="where" class="data-section">
-        <h2>Where</h2>
+        <h2>Where</h2> <!--need to improve -->
+        <p>I read anywhere and everywhere, at my desk, at tables, any seating on campus.</p>
       </section>
       <section id="how" class="data-section">
         <h2>How</h2>
+        <table>
+          <thead>
+            <tr>What I Read On::</tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>- Physical Copy</td> 
+            </tr>
+            <tr>
+              <td>- Phone</td>
+            </tr>
+            <tr>
+              <td>- Laptop</td>
+            </tr>
+          </tbody>
+        </table>
+        <figure>
+          <img src="#" alt="#">
+          <figcaption></figcaption>
+        </figure>
       </section>
       <section id="why" class="data-section">
         <h2>Why</h2>
@@ -80,6 +131,8 @@
       </section>
     </main>
     <footer>
+      <br>
+      <br>
       <p>Page Built by <a href="https://webpages.charlotte.edu/mmuruga2/itis3135/muruganandamsoftware.com/">Muruganandam Software</a> &copy; 2025</p>
     </footer>
     <!--javascript goes here-->

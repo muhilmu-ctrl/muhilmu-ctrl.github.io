@@ -38,6 +38,23 @@
         }
         section{
           margin-left: 60px;
+          margin-right: 60px;
+        }
+        main{
+          text-align: center;
+        }
+        main p,main ul{
+          text-align: left;
+          margin-left: 100px;
+        }
+        .beside{
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap:100px
+        }
+        footer{
+          text-align: center;
         }
     </style>
   </head>
@@ -75,19 +92,23 @@
         <p>I love reading because it helps me relax, use my imagination, and learn new things.</p>
         <br>
         <p>Some of my favorite genres include:</p>
-        <ul>
+        <div class="beside">
+          <ul>
           <li>Horror</li>
           <li>Thriller</li>
           <li>Fantasy</li>
         </ul>
+        <br>
         <figure>
           <img src="images/ai_generated_books.png" alt="ai generated image of a bookstore." width="400" height="400">
           <figcaption>AI generated image of the front of a bookstore.</figcaption>
         </figure>
+      </div>  
       </section>
       <section id="when" class="data-section" role="tabpanel">
         <h2>When</h2><!--needs work-->
         <p>I usually read whenever I want to take a break from working on assignments or if I get bored.</p>
+        <br>
         <figure>
           <img src="images/ai_generated_taking_a_break.png" alt="ai generated image of a person taking a break." width="400" height="400">
           <figcaption></figcaption>

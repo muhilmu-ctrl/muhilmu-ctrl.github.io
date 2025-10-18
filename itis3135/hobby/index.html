@@ -44,21 +44,21 @@
   <body>
     <header>
       <h1>Reading</h1>
-      <nav>
-        <a href="#what" class="nav-link" aria-selected="true">What</a>
+      <div role="tablist">
+        <a href="#what" class="nav-link" role="tab" aria-selected="true">What</a>
         📖
-        <a href="#who" class="nav-link" aria-selected="false">Who</a>
+        <a href="#who" class="nav-link" role="tab" aria-selected="false">Who</a>
         📖
-        <a href="#when" class="nav-link" aria-selected="false">When</a>
+        <a href="#when" class="nav-link" role="tab" aria-selected="false">When</a>
         📖
-        <a href="#where" class="nav-link" aria-selected="false">Where</a>
+        <a href="#where" class="nav-link" role="tab" aria-selected="false">Where</a>
         📖
-        <a href="#how" class="nav-link" aria-selected="false">How</a>
+        <a href="#how" class="nav-link" role="tab" aria-selected="false">How</a>
         📖
-        <a href="#why" class="nav-link" aria-selected="false">Why</a>
+        <a href="#why" class="nav-link" role="tab" aria-selected="false">Why</a>
         📖
-        <a href="#ai-prompts" class="nav-link" aria-selected="false">AI Prompts</a>
-      </nav>
+        <a href="#ai-prompts" class="nav-link" role="tab" aria-selected="false">AI Prompts</a>
+      </div>
     </header>
     <main>
       <h2 class="mobile-heading" style="text-align: center;">Hobby Site</h2>
@@ -68,11 +68,14 @@
         <h2>Who</h2>
         <p>Hey, I'm Muhilan and I love to read. I got into reading when I first  </p>
       </section>
-      <section id="what" class="data-section">
+      <section id="what" class="data-section" role="tabpanel">
         <h2>What</h2>
+        <p></p>
         <table>
           <thead>
-            <tr>My Favorite Genres:</tr>
+            <tr>
+              <th>My Favorite Genres:</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -91,19 +94,40 @@
           <figcaption></figcaption>
         </figure>
       </section>
-      <section id="when" class="data-section">
+      <section id="when" class="data-section" role="tabpanel">
         <h2>When</h2>
         <p>I usually read whenever I want to take a break from working on assignments or if I get bored.</p>
+        <figure>
+          <img src="#" alt="#">
+          <figcaption></figcaption>
+        </figure>
       </section>
-      <section id="where" class="data-section">
+      <section id="where" class="data-section" role="tabpanel">
         <h2>Where</h2> <!--need to improve -->
         <p>I read anywhere and everywhere, at my desk, at tables, any seating on campus.</p>
+        <br>
+        <table>
+          <thead>
+            <tr><th>Where I get books:</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>- Libraries</td> 
+            </tr>
+            <tr>
+              <td>- Local Bookstores</td>
+            </tr>
+            <tr>
+              <td>- Websites</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
-      <section id="how" class="data-section">
+      <section id="how" class="data-section" role="tabpanel">
         <h2>How</h2>
         <table>
           <thead>
-            <tr>What I Read On::</tr>
+            <tr><th>What I Use to Read:</th></tr>
           </thead>
           <tbody>
             <tr>
@@ -122,10 +146,10 @@
           <figcaption></figcaption>
         </figure>
       </section>
-      <section id="why" class="data-section">
+      <section id="why" class="data-section" role="tabpanel">
         <h2>Why</h2>
       </section>
-      <section id="ai-prompts" class="data-section">
+      <section id="ai-prompts" class="data-section" role="tabpanel">
         <h2>AI Prompts</h2>
         <p><strong>Nav bar prompt: </strong>Create the code for a nav bar. it should include links to these sections: who, what, when, where, how, why, and ai prompts. use this emoji(📖) as a divider.</p>
       </section>
@@ -137,22 +161,22 @@
     </footer>
     <!--javascript goes here-->
     <script>
-      document.addEventListener("DOMContentLoaded",()=>{
+      document.addEventListener("DOMContentLoaded",() => {
         const navLink = document.querySelectorAll(".nav-link");
         const sections = document.querySelectorAll(".data-section");
 
         function hideSection(){
-          sections.forEach(s=>{
+          sections.forEach((s) => {
             s.style.display = "none";
           });
         }
         function selectAriaFalse(){
-          navLink.forEach(n=>{
+          navLink.forEach((n) => {
             n.setAttribute("aria-selected","false");
           });
         }
-        navLink.forEach(n => {
-          n.addEventListener("click",(e)=>{
+        navLink.forEach((n) => {
+          n.addEventListener("click",(e) => {
             e.preventDefault();
 
             const target = e.currentTarget.getAttribute("href");
@@ -160,18 +184,18 @@
 
             hideSection();
             selectAriaFalse();
-            if(targetSection){
+            if (targetSection){
               targetSection.style.display = "block";
             }
             e.currentTarget.setAttribute("aria-selected","true");
           });
         });
         const defaultPage = document.querySelector("#what");
-        if(defaultPage){
+        if (defaultPage){
           defaultPage.style.display = "block";
         }
         const defaultNavLink = document.querySelector('a[href="#what"]');
-        if(defaultNavLink){
+        if (defaultNavLink){
           defaultNavLink.setAttribute("aria-selected","true");
         }
       });

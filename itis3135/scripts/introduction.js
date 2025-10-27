@@ -54,7 +54,7 @@ form.addEventListener("submit",function(e){
     let isValid = true;
     const requiredElements = form.querySelectorAll('[required]'); 
     
-    requiredElements.forEach(e => {
+    requiredElements.forEach((e) => {
         if (!e.value.trim() && e.type !== 'file') {
             isValid = false;
             e.style.border = '2px solid red';
@@ -101,7 +101,7 @@ form.addEventListener("submit",function(e){
 
     const collectedCourses = [];
     const courseGroups = coursesContainer.querySelectorAll(".course-group");
-    courseGroups.forEach(group => {
+    courseGroups.forEach((group) => {
         const dept = group.querySelector(".course-dept").value.trim();
         const num = group.querySelector(".course-num").value.trim();
         const name = group.querySelector(".course-name").value.trim();
@@ -147,6 +147,7 @@ form.addEventListener("submit",function(e){
         ${data.divider}
         <a href="${data.itis}" target="_blank">ITIS3135</a>
     </p>
+    <p><a href="intro_form.html">Reset and Create Another Page</a></p>
     `;
 });
 
@@ -156,7 +157,7 @@ clearBtn.addEventListener("click", function(){
     elements.forEach((e) => {
         e.value="";
         e.style.border = '2px solid rgb(41, 33, 95)';
-    })
+    });
     document.getElementById("pic").src = "images/muhilan_photo.jpeg";
 });
 
@@ -165,11 +166,11 @@ form.addEventListener("reset",function(){
     document.getElementById("pic").src = "images/muhilan_photo.jpeg";
     
     const groups = coursesContainer.querySelectorAll(".course-group:not(:first-child)");
-    groups.forEach(group => group.remove());
+    groups.forEach((group) => group.remove());
     courseGroupCounter = 2;
     
     const allInputs = form.querySelectorAll("input, textarea");
-    allInputs.forEach(input => {
+    allInputs.forEach((input) => {
         input.style.border = '2px solid rgb(41, 33, 95)';
     });
 });

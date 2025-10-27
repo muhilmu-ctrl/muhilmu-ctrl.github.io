@@ -113,6 +113,28 @@ form.addEventListener("submit",function(e){
 
     const main = document.querySelector("main");
     main.innerHTML = `
+        <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: rgb(173, 247, 190);
+        }
+        a{
+            color:rgb(22, 4, 139)
+        }
+        a:hover{
+    color:rgb(191, 26, 26);
+        }
+        h1{
+            font-family:Tahoma;
+        }
+        h2{
+            font-family:Tahoma;
+        }
+        p{
+            font-family:Georgia;
+        } 
+    </style>
     <h2>Introduction</h2>
     <h2>${data.firstName} ${data.middleName ? `"${data.middleName}"`: ""} ${data.nickname ? `"${data.nickname}"`: ""} ${data.lastName}</h2>
     <figure>

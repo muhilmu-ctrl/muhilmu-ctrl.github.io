@@ -7,7 +7,7 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         body{
-            background-color:rgb(173, 247, 190);
+            background-color:rgb(240, 197, 195);
             color:rgb(41, 33, 95);
         }
         a{
@@ -30,7 +30,7 @@
             margin-top: 15px;
             margin-bottom: 5px;
         } 
-        /*form input{
+        form input{
             display: block;
             padding: 10px;
             border-radius: 6px;
@@ -43,19 +43,19 @@
             border-radius: 6px;
             margin-bottom: 15px;
             border: 2px solid rgb(41, 33, 95);
-        }*/
+        }
     </style>
   </head>
   <body>
     <header>
-      <div data-include="components/header.html"></div>
+      <!-- <div data-include="components/header.html"></div> -->
     </header>
     <main>
       <h2 class="mobile-heading">Introduction Form</h2>
       <br>
       <h3>Please submit the form below.</h3>
-      <form>
-        <label>First Name: <input id="firstName" type="text" value="Muhilan" placeholder="first name" requred></label>
+      <form id="introForm">
+        <label>First Name: <input id="firstName" type="text" value="Muhilan" placeholder="first name" required></label>
 
         <label>Middle Name/Initial (optional): <input id="middleName" type="text" value="" placeholder="middle name"></label>
 
@@ -69,32 +69,40 @@
 
         <label>Mascot Adjective: <input id="mascotAdj" type="text" value="Magnificent" placeholder="Enter mascot adjective" required></label>
 
-        <label>Mascot Adjective: <input id="mascotAnimal" type="text" value="Meercat" placeholder="Enter mascot animal" required></label>
+        <label>Mascot Animal: <input id="mascotAnimal" type="text" value="Meercat" placeholder="Enter mascot animal" required></label>
 
         <label>Divider (ie, ~, |, ♥️, etc): <input id="divider" type="text" value="||" placeholder="Enter divider" required></label>
 
-        <label>Picture: <input id="picture" type="file" alt=""></label><!--needs work-->
+        <img id="pic" src="images/muhilan_photo.jpeg" alt="Muhilan_Muruganandam"/>
+        <label>Picture: <input id="picture" type="file" accept="image/*"></label>
         
         <label>Picture Caption: <input id="picCaption" type="text" value="My birthday, 2024" placeholder="Enter picture caption" required></label>
         
         <label>Personal Statement: <textarea id="personalStmt" placeholder="Enter personal statement"></textarea></label>
 
-        <!--7 Main Bullets (Personal Background, etc)-->
-        <label>Personal Background: <input type="text" value="Born in Texas, became interested in computer science after joining a coding club in middle school." placeholder="Enter personal background"></label>
+        <label>Personal Background: <input id="personalBg" type="text" value="Born in Texas, became interested in computer science after joining a coding club in middle school." placeholder="Enter personal background"></label>
         
-        <label>Professional Background: <input type="text" value="" placeholder="Enter professional background"></label>
+        <label>Professional Background: <input id="profBg" type="text" value="" placeholder="Enter professional background"></label>
         
-        <label>Academic Background: <input type="text" value="Junior at UNCC majoring in Computer Science with a concentration in Software Engineering." placeholder="Enter acdemic background"></label>
+        <label>Academic Background: <input id="academicBg" type="text" value="Junior at UNCC majoring in Computer Science with a concentration in Software Engineering." placeholder="Enter acdemic background"></label>
         
-        <label>Primary Computer: <input type="text" value="Windows Thinkpad" placeholder="Enter primary computer"></label>
+        <label>Primary Computer: <input id="primaryComp" type="text" value="Windows Thinkpad" placeholder="Enter primary computer"></label>
 
-        <label>Hobbies: <input type="text" value="" placeholder="Enter hobbies"></label>
+        <label>Hobbies: <input id="hobbies" type="text" value="" placeholder="Enter hobbies"></label>
         
-        <label>Skills: <input type="text" value="" placeholder="Enter skills"></label>
+        <label>Skills: <input id="skills" type="text" value="" placeholder="Enter skills"></label>
         
-        <label>???: <input type="text" value="" placeholder="Enter"></label>
-
         <!--Course and sub-bullets, with fields for each of: department, number, name, reason.-->
+        <div id="coursesContainer">
+            <label>Department: <input type="text" placeholder="e.g., ITCS"></label>
+            <label>Number: <input type="text" placeholder="e.g., 3112"></label>
+            <label>Course Name: <input type="text" placeholder="e.g., Object Oriented Systems"></label>
+            <label>Reason: <input type="text" placeholder="e.g., Concentration Elective"></label>
+        </div>
+        
+        <button type="button" class="addCourseBtn">Add Another Course</button>
+        <button type="button" class="removeCourseBtn">Remove Course</button>
+
         <label>Quote: <input id="quote" type="text" value="“When stupid ideas work, they become genius ideas.”" placeholder="Enter quote"></label>
 
         <label>Quote Author: <input id="quoteAuthor" type="text" value="Andy Weir" placeholder="Enter quote author"></label>
@@ -114,14 +122,15 @@
         
         <label>ITIS3135: <input id="itis" type="url" value="https://webpages.charlotte.edu/mmuruga2/itis3135/" placeholder="ITIS3135"></label>
         
-        <button type="button">Submit</Button>
-        <button type="button">Reset</Button>
-        <button type="button">Clear</Button>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button id="clearBtn" type="button">Clear</button>
       </form>
     </main>
     <footer>
-      <div data-include="components/footer.html"></div>
+      <!-- <div data-include="components/footer.html"></div> -->
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
   </body>
 </html>

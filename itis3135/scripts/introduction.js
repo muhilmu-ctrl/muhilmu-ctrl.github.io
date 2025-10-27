@@ -84,7 +84,7 @@ form.addEventListener("submit",function(e){
         academicBg: document.getElementById("academicBg").value.trim(),
         primaryComp: document.getElementById("primaryComp").value.trim(),
         graduation: document.getElementById("graduation").value.trim(),
-        skills: document.getElementById("skills").value.trim(),        
+        userFrom: document.getElementById("userFrom").value.trim(),        
         quote: document.getElementById("quote").value.trim(),
         quoteAuthor: document.getElementById("quoteAuthor").value.trim(),
         funnyThing: document.getElementById("funnyThing").value.trim(),
@@ -148,7 +148,7 @@ form.addEventListener("submit",function(e){
         <li><b>Academic Background:</b> ${data.academicBg}</li>
         <li><b>Primary Computer Platform:</b> ${data.primaryComp}</li>
         <li><b>Graduation Date:</b> ${data.graduation}</li>
-        <li><b>Skills:</b> ${data.skills}</li>
+        <li><b>From:</b> ${data.userFrom}</li>
     </ul>
     <h3>Courses I Have Taken & Why</h3>
     <ul>

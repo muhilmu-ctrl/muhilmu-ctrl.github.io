@@ -130,7 +130,7 @@ form.addEventListener("submit",function(e){
     </ul>
     <h3>Courses I Have Taken & Why</h3>
     <ul>
-        ${courses.map((c) => `<li>${c.dept} ${c.num} - ${c.name} (${c.reason})</li>`).join("")}
+        ${collectedCourses.map((c) => `<li>${c.dept} ${c.num} - ${c.name} (${c.reason})</li>`).join("")}
     </ul>
     <p>"${data.quote}" -${data.quoteAuthor}</p>
     ${data.funnyThing ? `<p>Funny Thing About Me: ${data.funnyThing}</p>` : ''}

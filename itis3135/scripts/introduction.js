@@ -149,19 +149,21 @@ form.addEventListener("submit",function(e){
         <li><b>Academic Background:</b> ${data.academicBg}</li>
         <li><b>Background in this subject: </b> ${data.subjectBg}</li>
         <li><b>Primary Computer Platform:</b> ${data.primaryComp}</li>
+        <li>Courses I Am Taking & Why:</li>
+        <li>
+            <ul>
+                ${collectedCourses.map((c) => `<li>${c.dept} ${c.num} - ${c.name} (${c.reason})</li>`).join("")}
+            </ul>
+        </li>
+        <li><b>Graduating in</b> ${data.graduation}</li>
+        <li><b>From</b> ${data.userFrom}</li>
     </ul>
-    <h3>Courses I Am Taking & Why:</h3>
-    <ul>
-        ${collectedCourses.map((c) => `<li>${c.dept} ${c.num} - ${c.name} (${c.reason})</li>`).join("")}
-    </ul>
-    <p>${data.quote}  - ${data.quoteAuthor}</p>
+    
+    <br>
+    <p style="text-align:center;">${data.quote}  - ${data.quoteAuthor}</p>
     ${data.funnyThing ? `<p>Funny Thing About Me: ${data.funnyThing}</p>` : ''}
     ${data.shareStatement ? `<p>Something I Would Like to Share: ${data.shareStatement}</p>` : ''}
-    <ul>
-        <li><b>Graduation Date:</b> ${data.graduation}</li>
-        <li><b>From:</b> ${data.userFrom}</li>
-    </ul>
-    <p>
+    <nav style="text-align:center;">
         <a href="${data.unccWebpage}" target="_blank">Charlotte Webpges</a>
         ${data.divider}
         <a href="${data.linkedIn}" target="_blank">LinkedIn</a>
@@ -171,7 +173,7 @@ form.addEventListener("submit",function(e){
         <a href="${data.gitHubIo}" target="_blank">GitHub.io</a>
         ${data.divider}
         <a href="${data.itis}" target="_blank">ITIS3135</a>
-    </p>
+    </nav>
     <p><a href="intro_form.html">Reset and Create Another Page</a></p>
     `;
 });

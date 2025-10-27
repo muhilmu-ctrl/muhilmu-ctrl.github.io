@@ -94,10 +94,12 @@
         
         <!--Course and sub-bullets, with fields for each of: department, number, name, reason.-->
         <div id="coursesContainer">
-            <label>Department: <input type="text" value="ITIS" placeholder="e.g., ITCS"></label>
-            <label>Number: <input type="text" value="3135" placeholder="e.g., 3112"></label>
-            <label>Course Name: <input type="text" value="Front-End Web App Development" placeholder="e.g., Object Oriented Systems"></label>
-            <label>Reason: <input type="text" value="Course Requirement" placeholder="e.g., Concentration Elective"></label>
+            <div class="course-group"> 
+                <label>Department: <input class="course-dept" type="text" value="ITIS" placeholder="e.g., ITCS" required></label>
+                <label>Number: <input class="course-num" type="text" value="3135" placeholder="e.g., 3112" required></label>
+                <label>Course Name: <input class="course-name" type="text" value="Front-End Web App Development" placeholder="e.g., Object Oriented Systems" required></label>
+                <label>Reason: <input class="course-reason" type="text" value="Course Requirement" placeholder="e.g., Concentration Elective" required></label>
+            </div>
         </div>
         
         <button type="button" class="addCourseBtn">Add Another Course</button>

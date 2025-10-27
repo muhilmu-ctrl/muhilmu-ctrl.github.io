@@ -137,7 +137,7 @@ form.addEventListener("submit",function(e){
         } 
     </style>
     <h2>Introduction</h2>
-    <h2>${data.firstName} ${data.middleName ? `"${data.middleName}"`: ""} ${data.nickname ? `"${data.nickname}"`: ""} ${data.lastName}</h2>
+    <h2>${data.firstName} ${data.middleName ? `${data.middleName}`: ""} ${data.nickname ? `"${data.nickname}"`: ""} ${data.lastName}</h2>
     <figure>
         <img src="${finalImg}" alt="Profile Picture" style="max-width:200px;">
         <figcaption><i>${data.picCaption}</i></figcaption>

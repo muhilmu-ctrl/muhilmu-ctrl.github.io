@@ -42,6 +42,13 @@
             margin-bottom: 15px;
             border: 2px solid rgb(41, 33, 95);
         }
+        textarea{
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 2px solid rgb(41, 33, 95);
+        }
     </style>
   </head>
   <body>
@@ -78,6 +85,34 @@
 
         <label for="divider">Divider (ie, ~, |, ♥️, etc)</label>
         <input id="divider" type="text" value="||" placeholder="Enter divider">
+
+        <label for="picture">Picture</label><!--needs work-->
+        <input id="picture" type="image" value="">
+
+        <label for="picCaption">Picture Caption</label>
+        <input id="picCaption" type="text" value="My birthday, 2024" placeholder="Enter picture caption">
+
+        <label for="personalStmt">Personal Statement</label>
+        <textarea id="personalStmt" type="text" placeholder="Enter personal statement"></textarea>
+
+        <!--7 Main Bullets (Personal Background, etc)-->
+        
+        <!--Course and sub-bullets, with fields for each of: department, number, name, reason.-->
+        
+        <label for="quote">Quote</label>
+        <input id="quote" type="text" value="“When stupid ideas work, they become genius ideas.”" placeholder="Enter quote">
+
+        <label for="quoteAuthor">Quote Author</label>
+        <input id="quoteAuthor" type="text" value="Andy Weir" placeholder="Enter quote author">
+
+        <label for="funnyThing">Funny Thing (optional)</label>
+        <input id="funnyThing" type="text" value="" placeholder="Enter a funny thing about you">
+
+        <label for="shareStatement">Something I would like to share (optional)</label>
+        <input id="shareStatement" type="text" value="" placeholder="Enter Something you would like to share">
+        <!--5 links (LinkedIn, etc)-->
+
+
       </form>
     </main>
     <footer>

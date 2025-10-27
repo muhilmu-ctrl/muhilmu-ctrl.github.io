@@ -8,10 +8,10 @@
     <style>
         body{
             background-color: rgb(222, 211, 211);
-            color:rgb(41, 33, 95)
+            color:rgb(41, 33, 95);
         }
         a{
-            color:rgb(22, 4, 139)
+            color:rgb(22, 4, 139);
         }
         a:hover{
     color:rgb(191, 26, 26);
@@ -24,7 +24,24 @@
         }
         p{
             font-family:Georgia;
-        } 
+        }
+        form{
+            background-color: rgb(202, 178, 178);
+            padding:20px;
+            border: 2px solid rgb(41, 33, 95);
+        }
+        form label{
+            display:block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        form input{
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 2px solid rgb(41, 33, 95);
+        }
     </style>
   </head>
   <body>
@@ -53,6 +70,14 @@
 
         <label for="acknDate">Acknowledgement Date</label>
         <input id="acknDate" type="text" value="8/21/25" placeholder="Enter acknowledgement date">
+
+        <label for="mascotAdj">Mascot Adjective</label>
+        <input id="mascotAdj" type="text" value="Magnificent" placeholder="Enter mascot adjective">
+        <label for="mascotAnimal">Mascot Adjective</label>
+        <input id="mascotAnimal" type="text" value="Meercat" placeholder="Enter mascot animal">
+
+        <label for="divider">Divider (ie, ~, |, ♥️, etc)</label>
+        <input id="divider" type="text" value="||" placeholder="Enter divider">
       </form>
     </main>
     <footer>

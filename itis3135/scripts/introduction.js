@@ -83,7 +83,7 @@ form.addEventListener("submit",function(e){
         profBg: document.getElementById("profBg").value.trim(),
         academicBg: document.getElementById("academicBg").value.trim(),
         primaryComp: document.getElementById("primaryComp").value.trim(),
-        hobbies: document.getElementById("hobbies").value.trim(),
+        graduation: document.getElementById("graduation").value.trim(),
         skills: document.getElementById("skills").value.trim(),        
         quote: document.getElementById("quote").value.trim(),
         quoteAuthor: document.getElementById("quoteAuthor").value.trim(),
@@ -147,14 +147,14 @@ form.addEventListener("submit",function(e){
         <li><b>Professional Background:</b> ${data.profBg}</li>
         <li><b>Academic Background:</b> ${data.academicBg}</li>
         <li><b>Primary Computer Platform:</b> ${data.primaryComp}</li>
-        <li><b>Hobbies:</b> ${data.hobbies}</li>
+        <li><b>Graduation Date:</b> ${data.graduation}</li>
         <li><b>Skills:</b> ${data.skills}</li>
     </ul>
     <h3>Courses I Have Taken & Why</h3>
     <ul>
         ${collectedCourses.map((c) => `<li>${c.dept} ${c.num} - ${c.name} (${c.reason})</li>`).join("")}
     </ul>
-    <p>"${data.quote}" -${data.quoteAuthor}</p>
+    <p>${data.quote}  - ${data.quoteAuthor}</p>
     ${data.funnyThing ? `<p>Funny Thing About Me: ${data.funnyThing}</p>` : ''}
     ${data.shareStatement ? `<p>Something I Would Like to Share: ${data.shareStatement}</p>` : ''}
 

@@ -150,7 +150,7 @@ form.addEventListener("submit",function(e){
         <li><b>Background in this subject: </b> ${data.subjectBg}</li>
         <li><b>Primary Computer Platform:</b> ${data.primaryComp}</li>
     </ul>
-    <h3>Courses I Have Taken & Why</h3>
+    <h3>Courses I Am Taking & Why:</h3>
     <ul>
         ${collectedCourses.map((c) => `<li>${c.dept} ${c.num} - ${c.name} (${c.reason})</li>`).join("")}
     </ul>

@@ -82,6 +82,7 @@ form.addEventListener("submit",function(e){
         personalBg: document.getElementById("personalBg").value.trim(),
         profBg: document.getElementById("profBg").value.trim(),
         academicBg: document.getElementById("academicBg").value.trim(),
+        subjectBg: document.getElementById("subjectBg").value.trim(),
         primaryComp: document.getElementById("primaryComp").value.trim(),
         graduation: document.getElementById("graduation").value.trim(),
         userFrom: document.getElementById("userFrom").value.trim(),        
@@ -146,9 +147,8 @@ form.addEventListener("submit",function(e){
         <li><b>Personal Background:</b> ${data.personalBg}</li>
         <li><b>Professional Background:</b> ${data.profBg}</li>
         <li><b>Academic Background:</b> ${data.academicBg}</li>
+        <li><b>Background in this subject: </b> ${data.subjectBg}</li>
         <li><b>Primary Computer Platform:</b> ${data.primaryComp}</li>
-        <li><b>Graduation Date:</b> ${data.graduation}</li>
-        <li><b>From:</b> ${data.userFrom}</li>
     </ul>
     <h3>Courses I Have Taken & Why</h3>
     <ul>
@@ -157,7 +157,10 @@ form.addEventListener("submit",function(e){
     <p>${data.quote}  - ${data.quoteAuthor}</p>
     ${data.funnyThing ? `<p>Funny Thing About Me: ${data.funnyThing}</p>` : ''}
     ${data.shareStatement ? `<p>Something I Would Like to Share: ${data.shareStatement}</p>` : ''}
-
+    <ul>
+        <li><b>Graduation Date:</b> ${data.graduation}</li>
+        <li><b>From:</b> ${data.userFrom}</li>
+    </ul>
     <p>
         <a href="${data.unccWebpage}" target="_blank">Charlotte Webpges</a>
         ${data.divider}

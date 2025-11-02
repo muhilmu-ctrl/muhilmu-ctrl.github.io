@@ -65,6 +65,11 @@ function generateJSON(){
         pageHeading.textContent = "Introduction HTML";
     }
 
+    const instructionHeading = document.getElementById("instructionHeading");
+    if (instructionHeading){
+        instructionHeading.style.display = "none";
+    }
+
     const output = document.getElementById("jsonOutput");
     const jsonData = document.getElementById("jsonData");
 

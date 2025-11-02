@@ -45,11 +45,48 @@ function generateHTML(){
         subjectBackground: document.getElementById("subjectBg").value.trim(),
         primaryComputer: document.getElementById("primaryComp").value.trim(),
         graduationDate: document.getElementById("graduation").value.trim(),
+        userFrom: document.getElementById("userFrom").value.trim(),
         courses: courses,
         links: links
     };
 
-    //
+    let htmlOutput = `
+    <section>
+        <h2>Introduction HTML</h2>
+        <h3>${data.firstName} ${data.preferredName ? `"${data.preferredName}"` : ''} ${data.lastName} ${data.divider} ${data.mascotAdjective} ${data.mascotAnimal}</h3>
+        <figure>
+            <img 
+                src="${data.image}" 
+                alt="Headshot of ${data.firstName} ${data.lastName}"/>
+            <figcaption>
+                ${data.imageCaption}
+            </figcaption>
+        </figure>
+        ${data.personalStatement ? `<p><strong>Personal Statement:</strong> ${data.personalStatement}</p>` : ''}
+        <ul>
+            <li><strong>Acknowledgement Statement:</strong> ${data.acknowledgementStatement}</li>
+            <li><strong>Personal Statement:</strong> ${data.personalStatement}</li>
+            <li><strong>Personal Background:</strong> ${data.personalBackground}</li>
+            <li><strong>Professional Background:</strong> ${data.professionalBackground}</li>
+            <li><strong>Academic Background:</strong> ${data.academicBackground}</li>
+            <li><strong>Subject Background:</strong> ${data.subjectBackground}</li>
+            <li><strong>Primary Computer:</strong> ${data.primaryComputer}</li>
+            <li><strong>Graduation Date:</strong> ${data.graduationDate}</li>
+            <li><strong>From:</strong> ${data.userFrom}</li>
+        </ul>
+
+        //courses
+
+        ${data.funnyThing ? `<p><strong>Funny Fact:</strong> ${data.funnyThing}</p>` : ''}
+        ${data.shareStatement ? `<p><strong>To Share:</strong> ${data.shareStatement}</p>` : ''}
+        <br>
+        <br>
+        ${data.quote ? `<p><strong>Quote:</strong> ${data.quote} — <em>${data.quoteAuthor}</em></p>` : ''}
+        
+        //links
+        
+    </section>
+    `;
 
 
 
@@ -67,7 +104,7 @@ function generateHTML(){
     const htmlData = document.getElementById("htmlData");
 
     output.style.display = "block";
-    htmlData.textContent = jsonStr;
+    htmlData.textContent = data;
 
     hljs.highlightElement(htmlData);
 

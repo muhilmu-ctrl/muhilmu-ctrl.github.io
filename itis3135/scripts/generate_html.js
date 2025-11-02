@@ -74,22 +74,32 @@ function generateHTML(){
             <li><strong>Graduation Date:</strong> ${data.graduationDate}</li>
             <li><strong>From:</strong> ${data.userFrom}</li>
         </ul>
-
-        //courses
+        
+        ${courses.length > 0 ? '<h4>Current Courses:</h4>' : ''}
+        ${courses.length > 0 ? '<ul>' : ''}
+        ${courses.map((c) => `
+        <li>
+            <strong>${c.department} ${c.number} - ${c.name}:</strong> ${c.reason}
+        </li>`).join('')}
+        ${courses.length > 0 ? '</ul>' : ''}
 
         ${data.funnyThing ? `<p><strong>Funny Fact:</strong> ${data.funnyThing}</p>` : ''}
         ${data.shareStatement ? `<p><strong>To Share:</strong> ${data.shareStatement}</p>` : ''}
         <br>
-        <br>
         ${data.quote ? `<p><strong>Quote:</strong> ${data.quote} — <em>${data.quoteAuthor}</em></p>` : ''}
         
-        //links
+        ${links.length > 0 ? '<ul>' : ''}
+        ${links.map((l) => `
+        <li>
+            <a href="${l.href}" target="_blank">${l.name}</a>
+        </li>`).join('')}
+        ${links.length > 0 ? '</ul>' : ''}
         
     </section>
     `;
 
-
-
+    document.getElementById("introForm").style.display = "none";
+    //document.getElementById("jsonOutput").style.display = "none";
     const pageHeading = document.getElementById("pageHeading");
     if (pageHeading){
         pageHeading.textContent = "Introduction HTML";
@@ -104,14 +114,14 @@ function generateHTML(){
     const htmlData = document.getElementById("htmlData");
 
     output.style.display = "block";
-    htmlData.textContent = data;
+    htmlData.textContent = htmlOutput;
 
     hljs.highlightElement(htmlData);
+}
 
-    document.addEventListener("DOMContentLoaded",() => {
+document.addEventListener("DOMContentLoaded",() => {
     const genHtmlBtn = document.getElementById("generateHtml");
     if (genHtmlBtn){
         genHtmlBtn.addEventListener("click",generateHTML);
     }
 });
-}

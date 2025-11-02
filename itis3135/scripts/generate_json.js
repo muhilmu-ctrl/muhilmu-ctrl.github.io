@@ -60,6 +60,11 @@ function generateJSON(){
     const jsonStr = JSON.stringify(jsonFile,null,2);
     document.getElementById("introForm").style.display = "none";
 
+    const pageHeading = document.getElementById("pageHeading");
+    if (pageHeading){
+        pageHeading.textContent = "Introduction HTML";
+    }
+
     const output = document.getElementById("jsonOutput");
     const jsonData = document.getElementById("jsonData");
 

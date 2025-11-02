@@ -85,7 +85,6 @@ function generateHTML(){
 
         ${data.funnyThing ? `<p><strong>Funny Fact:</strong> ${data.funnyThing}</p>` : ''}
         ${data.shareStatement ? `<p><strong>To Share:</strong> ${data.shareStatement}</p>` : ''}
-        <br>
         ${data.quote ? `<p><strong>Quote:</strong> ${data.quote} — <em>${data.quoteAuthor}</em></p>` : ''}
         
         ${links.length > 0 ? '<ul>' : ''}

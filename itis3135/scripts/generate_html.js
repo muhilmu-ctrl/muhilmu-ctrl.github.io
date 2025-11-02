@@ -46,6 +46,8 @@ function generateHTML(){
         primaryComputer: document.getElementById("primaryComp").value.trim(),
         graduationDate: document.getElementById("graduation").value.trim(),
         userFrom: document.getElementById("userFrom").value.trim(),
+        quote: document.getElementById("quote").value.trim(),
+        quoteAuthor: document.getElementById("quoteAuthor").value.trim(),
         courses: courses,
         links: links
     };

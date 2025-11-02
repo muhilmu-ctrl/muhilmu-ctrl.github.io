@@ -48,6 +48,8 @@ function generateHTML(){
         userFrom: document.getElementById("userFrom").value.trim(),
         quote: document.getElementById("quote").value.trim(),
         quoteAuthor: document.getElementById("quoteAuthor").value.trim(),
+        funnyThing: document.getElementById("funnyThing").value.trim(),
+        shareStatement: document.getElementById("shareStatement").value.trim(),
         courses: courses,
         links: links
     };

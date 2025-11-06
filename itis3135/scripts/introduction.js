@@ -174,8 +174,14 @@ form.addEventListener("submit",function(e){
         ${data.divider}
         <a href="${data.itis}" target="_blank">ITIS3135</a>
     </nav>
-    <p><a href="intro_form.html">Reset and Create Another Page</a></p>
+    
+    <button id="resetBtn" type="button">Reset Form</button>
     `;
+    //reset form
+    const resetBtn = document.getElementById("resetBtn");
+    resetBtn.addEventListener("click", function(){
+        window.location.href = "intro_form.html";
+    });
 });
 
 //clear
@@ -201,3 +207,4 @@ form.addEventListener("reset",function(){
         input.style.border = '2px solid rgb(41, 33, 95)';
     });
 });
+

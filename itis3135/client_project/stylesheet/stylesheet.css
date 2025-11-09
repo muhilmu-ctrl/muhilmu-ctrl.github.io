@@ -1,0 +1,21 @@
+body{
+    background-color: #ccd3ce;
+}
+h1{
+    font-size:40px;
+    text-align: center;
+}
+hr{
+    height:10px;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color:blue;
+}

@@ -5,10 +5,32 @@
     <title>Porunai | Home</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
+    <style>
+        .container{
+            display:flex;
+            gap:35px;
+            align-items: center;
+        }
+        .container img{
+            width:120px;
+            height:120px;
+            margin-left: 20px;
+        }
+        .headerText{
+            margin-left: 5px;
+            margin-top: 0px;
+            float:left;
+        }
+    </style>
   </head>
   <body>
     <header>
-        <h1>Porunai</h1>
+        <div class="container">
+            <img src="images/hero_image.png" alt="logo"/>
+            <div class="headerText">
+                <h1>Porunai</h1>
+            </div>
+        </div>
         <hr>
         <nav>
             <a href="./index.html">Home</a>

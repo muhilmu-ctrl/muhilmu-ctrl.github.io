@@ -54,3 +54,18 @@ main{
 footer{
     padding-left:40px;
 }
+.portfolio{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap:2px;
+}
+.photo img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit: cover;
+}
+.photo img:hover{
+    transform: scale(1.5);
+    box-shadow: 0 8px 15px black;
+}

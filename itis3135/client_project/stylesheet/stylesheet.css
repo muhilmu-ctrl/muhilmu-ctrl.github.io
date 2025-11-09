@@ -43,3 +43,9 @@ a:hover{
 .welcome{
     padding-left:125px;
 }
+nav a{
+    padding: 60px;
+}
+nav{
+    text-align: center;
+}

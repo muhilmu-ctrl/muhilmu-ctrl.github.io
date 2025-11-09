@@ -65,7 +65,25 @@ footer{
     display:block;
     object-fit: cover;
 }
-.photo img:hover{
-    transform: scale(1.5);
-    box-shadow: 0 8px 15px black;
+.lightbox{
+    position:fixed;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.lightbox.active{
+    visibility: visible;
+    opacity:1;
+}
+.lightbox img{
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 5px;
+    box-shadow:0 0 20px rgba(250,250,250,0.5)
 }

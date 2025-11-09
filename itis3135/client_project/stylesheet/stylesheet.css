@@ -19,3 +19,18 @@ a:visited{
 a:hover{
     color:blue;
 }
+.container{
+    display:flex;
+    gap:35px;
+    align-items: center;
+}
+.container img{
+    width:120px;
+    height:120px;
+    margin-left: 20px;
+}
+.headerText{
+    margin-left: 5px;
+    margin-top: 0px;
+    float:left;
+}

@@ -49,10 +49,9 @@ nav a{
 nav{
     text-align: center;
 }
-nav a.active{
-    border: 2px solid black;
-    padding:.5px;
-}
+.active{
+    text-decoration: underline overline;
+    }
 main{
     padding-left:40px;
 }

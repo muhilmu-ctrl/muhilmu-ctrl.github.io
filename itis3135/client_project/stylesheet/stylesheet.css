@@ -64,6 +64,7 @@ footer{
     height:auto;
     display:block;
     object-fit: cover;
+    /*cursor: pointer;*/
 }
 .lightbox{
     position:fixed;
@@ -76,8 +77,9 @@ footer{
     background-color: rgba(0,0,0,0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 9900;
 }
-.lightbox.active{
+.lightbox-active{
     visibility: visible;
     opacity:1;
 }

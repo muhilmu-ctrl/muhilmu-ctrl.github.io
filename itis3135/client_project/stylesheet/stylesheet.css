@@ -114,3 +114,16 @@ form input{
     margin-bottom: 15px;
     border: 2px solid rgb(41, 33, 95);
 }
+.data-section{
+    display:none;
+}
+.service-tabs .nav-link[aria-selected="true"]{
+    color:#d9dfdb;
+    background-color: black;
+}
+.service-tabs{
+    display:flex;
+    gap:70px;
+    margin-bottom: 20px;
+
+}

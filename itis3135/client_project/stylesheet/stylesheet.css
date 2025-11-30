@@ -16,7 +16,7 @@ a:visited{
     color:black;
 }
 a:hover{
-    color:blue;
+    color:rgb(95, 95, 241);
 }
 .container{
     display:flex;

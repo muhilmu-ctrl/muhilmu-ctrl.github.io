@@ -8,20 +8,32 @@ document.addEventListener("DOMContentLoaded",() => {
         return;
     }
 
-    images.forEach((img) => {
-        img.addEventListener("click", function(){
+    const openLightbox = (imgSrc) => {
+        lightboxImage.src = imgSrc;
+        lightbox.style.display = "flex";
+        setTimeout(() => {
             lightbox.classList.add("lightbox-active");
-            lightboxImage.src = img.src;
+        }, 20);
+    };
+
+    const closeLightbox = () => {
+        lightbox.classList.remove("lightbox-active");
+        setTimeout(() => {
+            lightbox.style.display = "none";
+        }, 300);
+    };
+
+    images.forEach((i) => {
+        i.addEventListener("click", function(){
+            openLightbox(i.src);
         });
     });
 
-    lightbox.addEventListener("click",function(e){
+    lightbox.addEventListener("click", function(e){
         if (e.target === lightbox){
-            lightbox.classList.remove("lightbox-active");
+            closeLightbox();
         }
-        console.log("lightbox works");
     });
-    
     console.log(images);
 });
 

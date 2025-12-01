@@ -128,3 +128,22 @@ form input{
     /* justify-content:center; */
     padding-bottom:50px;
 }
+.popup{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:50%;
+    height:50%;
+    transform: translate(-50%,-50%);
+    /* background-color: rgb(222, 235, 246); */
+    z-index: 9900;
+}
+.popup-content{
+    background: rgb(204, 208, 211);
+    width:300px;
+    border-radius:15px;
+    border:2px solid rgb(41, 33, 95);
+    text-align: center;
+    padding:10px;
+}

@@ -140,10 +140,10 @@ form input{
     z-index: 9900;
 }
 .popup-content{
-    background: rgb(204, 208, 211);
+    color: #d9dfdb;
+    background-color: rgb(41, 33, 95);
     width:300px;
     border-radius:15px;
-    border:2px solid rgb(41, 33, 95);
     text-align: center;
     padding:10px;
 }

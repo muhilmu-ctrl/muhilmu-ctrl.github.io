@@ -61,7 +61,7 @@ footer{
 .portfolio{
     display:grid;
     grid-template-columns: auto auto auto;
-    gap:2px;
+    gap:8px;
 }
 .photo img{
     width:100%;
